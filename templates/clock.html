@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body onload="startTime()">
+    <div class="clock-container">
+        <h1>Digital Clock</h1>
+        <div id="txt" class="clock"></div>
+        <div id="date" class="date"></div>
+        <br>
+        <!-- Buttons -->
+        <button id="toggleFormat" class="button">Toggle 24/12 Hour</button>
+        <button id="toggleTheme" class="button">Switch Theme</button>
+        <select id="timezone" class="button">
+            <option value="local">Local Time</option>
+            <option value="UTC">UTC</option>
+            <option value="America/New_York">New York (EST)</option>
+            <option value="Europe/London">London (GMT)</option>
+            <option value="Asia/Tokyo">Tokyo (JST)</option>
+            <option value="Australia/Sydney">Sydney (AEST)</option>
+        </select>
+        
+        <!-- Alarm -->
+        <label for="alarmTime">Set Alarm:</label>
+        <input type="time" id="alarmTime" class="button">
+        <button id="setAlarm" class="button">Set Alarm</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

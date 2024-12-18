@@ -1,0 +1,92 @@
+/* Default Dark Theme */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+/* Clock Container */
+.clock-container {
+    text-align: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    color: #f1c40f;
+}
+
+.clock {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #f39c12;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.date {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #bdc3c7;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+/* Light Theme Adjustments */
+body.light-theme .clock-container {
+    background-color: #ecf0f1;
+}
+
+body.light-theme .clock {
+    color: #2c3e50;
+}
+
+body.light-theme .button {
+    background-color: #3498db;
+    color: #fff;
+}
+
+body.light-theme .button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .clock {
+        font-size: 2rem;
+    }
+    .clock-container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
